@@ -89,7 +89,7 @@
     <h1>教师节快乐</h1>
 
     <button id="playBgmBtn">播放教师节背景音乐</button>
-    <audio id="bgm" src="content://media/external/downloads/1000108660" loop></audio>
+    <audio id="bgm" src="./video/v1.mp4" loop></audio>
 
     <div id="quizContainer"></div>
 
@@ -101,9 +101,9 @@
         <iframe width="350" height="80" src="content://media/external/downloads/1000108656" allow="autoplay" allowfullscreen></iframe>
     </div>
 
-    <audio id="failSound1" src="content://media/external/downloads/1000108657"></audio>
-    <audio id="failSound2" src="content://media/external/downloads/1000108658"></audio>
-    <audio id="successSound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.oggcontent://media/external/downloads/1000108659"></audio>
+    <audio id="failSound1" src="./video/bc.mp4"></audio>
+    <audio id="failSound2" src="./video/bc.mp4"></audio>
+    <audio id="successSound" src="./video/bc.mp4"></audio>
 
     <script>
         const bgm = document.getElementById('bgm');
@@ -112,6 +112,8 @@
             bgm.play();
             document.getElementById('playBgmBtn').style.display = 'none';
         });
+
+        
 
         const failSound1 = document.getElementById('failSound1');
         const failSound2 = document.getElementById('failSound2');
