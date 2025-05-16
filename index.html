@@ -6,6 +6,225 @@
 </head>
 <body>
     <h1>教师节恶搞网页</h1>
-    <p>请重新打包你之前的完整 HTML 内容来替换这里。</p>
+    <p><!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>教师节恶搞解锁</title>
+    <style>
+        body {
+            font-family: '微软雅黑', Arial, sans-serif;
+            background: #fff;
+            color: #333;
+            text-align: center;
+            padding: 30px;
+        }
+        h1 {
+            color: #D84315;
+            text-shadow: 1px 1px 2px #FFA726;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin: 8px 0;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        button {
+            background: #D84315;
+            border: none;
+            padding: 10px 22px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 15px;
+            box-shadow: 0 4px 8px rgba(216,67,21,0.6);
+        }
+        button:hover {
+            background: #BF360C;
+        }
+        .error {
+            color: #E53935;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        #finalEssay {
+            background: #FFF3E0;
+            color: #2E7D32;
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 18px;
+            line-height: 1.6;
+            box-shadow: 0 4px 12px rgba(46,125,50,0.3);
+        }
+        iframe {
+            margin-top: 20px;
+            border: none;
+            border-radius: 10px;
+        }
+        #playBgmBtn {
+            margin-bottom: 30px;
+            background: #D84315;
+            color: white;
+            font-weight: bold;
+            border-radius: 8px;
+            padding: 12px 25px;
+            box-shadow: 0 4px 8px rgba(216,67,21,0.7);
+        }
+        #playBgmBtn:hover {
+            background: #BF360C;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>教师节恶搞闯关</h1>
+
+    <button id="playBgmBtn">播放教师节背景音乐</button>
+    <audio id="bgm" src="https://cdn.pixabay.com/download/audio/2022/03/23/audio_9f5c19a1c2.mp3?filename=happy-teacher-day-5999.mp3" loop></audio>
+
+    <div id="quizContainer"></div>
+
+    <div id="finalEssay" style="display:none;">
+        <h2>感恩老师</h2>
+        <p>
+            在我成长的道路上，老师您就像灯塔，指引我前进的方向。每一次的耐心教导，每一句鼓励的话语，都让我坚定信念，勇敢追梦。您不仅传授知识，更教会我做人，感恩有您陪伴，愿您幸福安康，教师节快乐！
+        </p>
+        <iframe width="350" height="80" src="https://www.youtube.com/embed/s9hGDIpwfXw?autoplay=1&controls=1" allow="autoplay" allowfullscreen></iframe>
+    </div>
+
+    <audio id="failSound1" src="https://www.soundjay.com/human/sounds/laugh-01.mp3"></audio>
+    <audio id="failSound2" src="https://www.soundjay.com/cartoon/sounds/fail-trombone-01.mp3"></audio>
+    <audio id="successSound" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
+
+    <script>
+        const bgm = document.getElementById('bgm');
+        document.getElementById('playBgmBtn').addEventListener('click', () => {
+            bgm.volume = 0.6;
+            bgm.play();
+            document.getElementById('playBgmBtn').style.display = 'none';
+        });
+
+        const failSound1 = document.getElementById('failSound1');
+        const failSound2 = document.getElementById('failSound2');
+        const successSound = document.getElementById('successSound');
+
+        const quizContainer = document.getElementById('quizContainer');
+        const finalEssay = document.getElementById('finalEssay');
+
+        const questions = [
+            {
+                q: '马来西亚是哪一年成立的？',
+                options: ['1957年', '1963年', '1948年', '1970年'],
+                answer: 1
+            },
+            {
+                q: '马来西亚的第一任首相是谁？',
+                options: ['东姑阿都拉曼', '马哈蒂尔', '纳吉', '安华'],
+                answer: 0
+            },
+            {
+                q: '马来西亚签署的什么合约确立了其联邦结构？',
+                options: ['槟城合约', '马来亚联邦合约', '马来西亚协定（Malaysia Agreement）', '马来西亚宪法'],
+                answer: 2
+            },
+            {
+                q: '已知函数f(x)=2x³ - 9x² + 12x - 4，求f\'(x)在x=2处的值。',
+                options: ['4', '8', '10', '14'],
+                answer: 3
+            },
+            {
+                q: '下列哪种粒子不属于基本粒子？',
+                options: ['夸克（Quark）', '电子（Electron）', '质子（Proton）', '中微子（Neutrino）'],
+                answer: 2
+            },
+            {
+                q: '哪种礼物是您最喜欢收到的？',
+                options: ['鲜花', '蟑螂', '手写贺卡', '我的爱'],
+                answer: 0
+            },
+            {
+                q: '设积分I=∫_0^1 x² dx，I等于多少？',
+                options: ['1/3', '1/2', '1', '2/3'],
+                answer: 0
+            },
+            {
+                q: '矩阵A=\n[[1,2],[3,4]]，其行列式det(A)等于？',
+                options: ['-2', '10', '5', '0'],
+                answer: 0
+            }
+        ];
+
+        let currentQuestion = 0;
+
+        function showQuestion() {
+            if (currentQuestion >= questions.length) {
+                quizContainer.style.display = 'none';
+                finalEssay.style.display = 'block';
+                bgm.pause();
+                const teacherSong = document.createElement('audio');
+                teacherSong.src = 'https://cdn.pixabay.com/download/audio/2022/03/23/audio_9f5c19a1c2.mp3?filename=happy-teacher-day-5999.mp3';
+                teacherSong.autoplay = true;
+                teacherSong.loop = true;
+                document.body.appendChild(teacherSong);
+                return;
+            }
+            const qObj = questions[currentQuestion];
+            let html = `<div class="question"><h2>第${currentQuestion + 1}题：</h2><p>${qObj.q.replace(/\n/g, '<br>')}</p>`;
+            for (let i = 0; i < qObj.options.length; i++) {
+                html += `<label><input type="radio" name="option" value="${i}">${qObj.options[i]}</label>`;
+            }
+            html += `<button onclick="submitAnswer()">提交</button><p class="error" id="errorMsg"></p></div>`;
+            quizContainer.innerHTML = html;
+        }
+
+        function submitAnswer() {
+            const options = document.getElementsByName('option');
+            let selected = -1;
+            for (const opt of options) {
+                if (opt.checked) selected = parseInt(opt.value);
+            }
+            const errorMsg = document.getElementById('errorMsg');
+            if (selected === -1) {
+                errorMsg.textContent = '请选择一个答案';
+                return;
+            }
+            if (currentQuestion === questions.length - 1) {
+                successSound.play();
+                currentQuestion++;
+                setTimeout(() => {
+                    showQuestion();
+                }, 800);
+                return;
+            }
+            if (selected === questions[currentQuestion].answer) {
+                errorMsg.textContent = '';
+                successSound.play();
+                currentQuestion++;
+                setTimeout(() => {
+                    showQuestion();
+                }, 800);
+            } else {
+                errorMsg.textContent = '答错了，再试试吧！';
+                failSound1.currentTime = 0;
+                failSound2.currentTime = 0;
+                failSound1.play();
+                failSound2.play();
+            }
+        }
+
+        showQuestion();
+    </script>
+
+</body>
+</html></p>
 </body>
 </html>
